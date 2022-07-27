@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,700&display=swap');
+html, body{
+    margin:0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Epilogue',sans-serif;
+
+}
+
+
+.sect-body{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    margin: auto;
+    justify-content: space-between;
+    width: 85%;
+    max-height: 80%;
+}
+
+.sect-body h1{
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.sect-body .hero-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.sect-body .main-content{
+    flex:50%;
+    position: relative;
+
+}
+
+.sect-body .hero-img{
+    flex: 40%;
+}
+
+.login-register-btns{
+    align-items: center;
+    display: inherit;
+}
+
+.login-register-btns>button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 6px 18px;
+}
+
+
+.register-btn{
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid black!important;
+}
+
+
+.main-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.logo-and-menulinks {
+    display: inline-flex;
+}
+#logo{
+    align-self: center;
+    margin-top: 10px;
+}
+.menu{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.main-menu #menuLinks{
+    display: block;
+    padding: 10px;
+}
+
+#menuLinks ul{
+    display: flex;
+}
+
+#menuLinks ul li{
+    display: block;
+    padding: 0 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+li .caretClass{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-content{
+    padding: 32px 64px;
+}
+.main-content h1{
+    font-family: 'Epilogue',sans-serif;
+    margin : 10px 0!important;
+}
+.main-content p{
+    color: hsl(0, 0%, 41%);
+    font-size: 15px;
+}
+
+.main-content .learn-more{
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;;
+}
+
+section#footer> div {
+    /* flex: 16%; */
+}
+
+ul :where(#features-drp, #company-drp) {
+    display: flex;
+    flex-flow: column;
+    padding: 12px;
+    position: absolute;
+    background-color: white;
+    z-index: 99;
+    font-family: 'Epilogue',sans-serif;
+    margin-top: 20px;
+}
+
+ul :where(#company-caret , #features-caret){
+    transition: all 1s;
+    transform: rotate(0deg);
+}
+
+.rotateThis{
+    transform: rotate(540deg);
+}
+
+.white-spaceGap{
+    flex:10%
+}
+
+ul #features-drp{
+    margin-left: -80px;
+    display: none;
+}
+ul #company-drp{
+    display: none;
+}
+li.link-drp div {
+    padding: 5px 3px;
+    font-size: 14px;
+    color: grey;
+}
+
+.link-drp div span{
+    padding:5px ;
+}
+
+.resp-menu{
+    display: none;
+}
+
+.showup{
+    display: flex!important;
+}
+
+.addWidth{
+    width: 60%!important;
+}
+
+#overlay{
+    display: none;
+}
+
+.overlay-show{
+    display: block!important;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.7;
+    z-index: 9;
+    width: 100%;
+}
+
+.close-btn-none{
+    /* display:none; */
+    float:right;
+}
+
+.d-none{
+    display: none;
+}
+
+.footer img{
+    width: 80%;
+}
+
+
+/* responsive code goes here */
+
+@media only screen and (max-width: 856px) {
+
+    div.main-menu{
+        margin:12px 30px;
+    }
+
+    .menu {
+        display:flex;
+        top: 0;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        width: 0px;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        background-color:hsl(0, 0%, 98%);
+        transition: width 0.3s ease-out;
+        z-index: 99;
+    }
+    
+    
+    .resp-menu{
+        display: block;
+        padding: 6px;
+        cursor: pointer;
+    }
+
+    .login-register-btns{
+        padding: 15px;
+    display: block;
+    align-self: flex-start;
+    }
+
+    .login-register-btns>button{
+        display: block;
+    }
+
+    #menuLinks ul.nav-Links{
+        display: block;
+        padding: 0;
+    }
+
+    /* .close-btn{
+        display: block;
+    } */
+
+    .close-btn-img{
+        float: right;
+        padding: 12px;
+    }
+
+    #menuLinks ul li{
+        display: block;
+        padding: 10px 10px;
+    }
+
+    ul :where(#features-drp, #company-drp ){
+        display: none;
+        margin-left: 0;
+        position: relative;
+        margin-left: 0!important;
+        background-color: transparent;
+    }
+
+    .sect-body{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        max-height: 100%;
+    }
+
+    .sect-body h1{
+        font-size: 42px;
+    }
+    
+    .main-content{
+        padding: 32px 12px;
+    }
+
+    .main-content p{
+        padding: 12px;
+    }
+
+    .sect-body .main-content{
+        order:2;
+    }
+
+    .white-spaceGap{
+        display: none;
+        flex: 0;
+    }
+
+    .hero-img{
+        order: 1;
+    }
+
+    
+
+    #footer{
+        padding:56px 0px;
+        position: relative;
+        width:100%;
+    }
+    
+}

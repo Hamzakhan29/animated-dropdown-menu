@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="stylecade.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Epilogue">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="main-menu">
+  <div class="logo">
+    <div id="logo">
+      <img src="./images/logo.svg" />
+    </div>
+    
+    
+  </div>
+  
+  <div class="menu">
+    <div class="close-btn d-none" id="closeMenu" >
+      <img src="./images/icon-close-menu.svg" class="close-btn-img"/>
+    </div>
+    <div id="menuLinks">
+      <ul class="nav-Links">
+        <li class="caret-dropdown"><a href="#">Features</a>
+          <span class="caretClass">
+            <img id="features-caret" src="./images/icon-arrow-down.svg" />
+          </span>
+          <ul class="dropdown" id="features-drp">
+            <li class="link-drp">
+              <div>
+                <img class="svg-drp" src="./images//icon-todo.svg" />
+                <span>todo list</span>
+              </div>
+            </li>
+            <li class="link-drp">
+              <div>
+                <img class="svg-drp" src="./images/icon-calendar.svg" />
+                <span>Calendar</span>
+              </div>
+            </li>
+            <li class="link-drp">
+              <div>
+                <img class="svg-drp" src="./images/icon-reminders.svg" />
+                <span>Remainders</span>
+              </div>
+            </li>
+            <li class="link-drp">
+              <div>
+                <img class="svg-drp" src="./images/icon-planning.svg" />
+                <span>Planning</span>
+              </div>
+            </li>
+          </ul>
+          
+        </li>
+        <li class="caret-dropdown"><a href="#">Company</a>
+          <span class="caretClass">
+            <img id="company-caret" src="./images/icon-arrow-down.svg" />
+          </span>
+          <ul class="dropdown" id="company-drp">
+            <li class="link-drp" ><div>History</div></li>
+            <li class="link-drp" ><div>Our Team</div> </li>
+            <li class="link-drp" ><div>Blog</div> </li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div class="login-register-btns">
+      <button class="login-btn">Login</button>
+      <button class="register-btn">Register</button>
+    </div>
+   
+  </div>
+  <div class="resp-menu">
+    <img src="./images/icon-menu.svg" id="burger-menu" class="resp-menu-img" />
+  </div>
+</div>
+<section class="sect-body">
+  <div class="main-content">
+    <h1>  Make remote work  </h1>
+    <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+      <br/>
+      <button class="learn-more" >Learn More</button>
+      <br/>
+      <section class="footer" id="footer">
+        <div class="img-footer">
+          <img src="./images/client-databiz.svg" />
+        </div>
+        <div class="img-footer">
+          <img src="./images/client-audiophile.svg" />
+        </div>
+        <div class="img-footer">
+          <img src="./images/client-maker.svg" />
+        </div>
+        <div class="img-footer">
+          <img src="./images/client-meet.svg" />
+        </div>
+      </section>
+  </div>
+  <div class="white-spaceGap"></div>
+  <div class="hero-img">
+    <img id="heroImg" src="./images/image-hero-desktop.png" />
+  </div>
+  
+
+</section>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hamza Khan</a>.
+  </div>
+  <div id="overlay"></div>
+  <script src="./index.js"></script>
+
+</body>
+</html>
