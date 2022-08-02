@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;800&display=swap'); */
+
+@font-face {
+    font-family: 'epilogueer';
+    src: url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;800&display=swap');
+}
+
 html, body{
     margin:0;
     box-sizing: border-box;
@@ -7,7 +14,7 @@ html, body{
 
 body{
     background-color: hsl(0, 0%, 98%);
-    font-family: 'Epilogue',sans-serif;
+    font-family: 'epilogueer',sans-serif;
 
 }
 
@@ -96,6 +103,8 @@ body{
 #menuLinks ul li{
     display: block;
     padding: 0 10px;
+    text-transform: capitalize;
+
 }
 
 li a{
@@ -119,6 +128,16 @@ li .caretClass{
 .main-content p{
     color: hsl(0, 0%, 41%);
     font-size: 15px;
+    font-family: 'epilogueer',sans-serif;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 22px 0;
+}
+
+.main-content .learn-more:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 
 .main-content .learn-more{
@@ -148,8 +167,10 @@ ul :where(#features-drp, #company-drp) {
     position: absolute;
     background-color: white;
     z-index: 99;
-    font-family: 'Epilogue',sans-serif;
+    font-family: 'Epilogueer',sans-serif;
     margin-top: 20px;
+    box-shadow: 0px 0px 10px -5px;
+    border-radius: 8px;
 }
 
 ul :where(#company-caret , #features-caret){
@@ -224,6 +245,11 @@ li.link-drp div {
     width: 80%;
 }
 
+li:is(.link-drp:hover,.link-drp:hover){
+    cursor: pointer;
+    background-color:hsl(0, 0%, 98%) ;
+}
+
 
 /* responsive code goes here */
 
@@ -256,13 +282,19 @@ li.link-drp div {
     }
 
     .login-register-btns{
-        padding: 15px;
     display: block;
-    align-self: flex-start;
+    /* align-self: center; */
+        margin: auto;
+    }
+
+    li .caretClass{
+        padding:0px 8px;
     }
 
     .login-register-btns>button{
         display: block;
+        padding: 12px 18px;
+        width: 10rem;
     }
 
     #menuLinks ul.nav-Links{
@@ -284,12 +316,19 @@ li.link-drp div {
         padding: 10px 10px;
     }
 
+    button.login-btn{
+        width: 100%;
+    }
+
     ul :where(#features-drp, #company-drp ){
         display: none;
         margin-left: 0;
         position: relative;
         margin-left: 0!important;
         background-color: transparent;
+        margin-top: 0;
+        box-shadow: 0 0 0 0;
+        border-radius: 0;
     }
 
     .sect-body{
